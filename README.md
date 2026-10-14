@@ -139,6 +139,10 @@ Copia el resultado en la variable `SECRET_KEY` del archivo `.env`.
 
 Esta clave se utiliza para cifrar y descifrar información mediante Fernet. Debe ser una clave válida generada por la biblioteca `cryptography`.
 
+```bash
+python3 -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"
+```
+
 Si no tienes Python y la biblioteca instalada en el equipo, puedes generarla mediante Docker:
 
 ```bash
